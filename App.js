@@ -1,15 +1,10 @@
 import React, {Component}  from 'react';
-import Test from "./src/components/Test";
+import {createDrawerNavigator} from 'react-navigation';
+import Test from "./src/components/Test/Test";
 
-export default class App extends Component {
-    render() {
-        return (
-            <BrowserRouter>
-                <Switch>
-                    <Route exact path="/" component={Test}/>
-                </Switch>
-            </BrowserRouter>
-        );
+export default createDrawerNavigator({
+    Test: {
+        screen: () => <Test texto='opa mundo'/>
     }
-}
+}, {drawerWidth: 300})
 
