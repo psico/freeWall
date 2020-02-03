@@ -1,10 +1,11 @@
-import React, {Component}  from 'react';
-import {createDrawerNavigator} from 'react-navigation';
-import Test from "./src/components/Test/Test";
+import React, {Component} from 'react';
+import { createAppContainer } from 'react-navigation';
+import AppNavigator from "./src/components/Navigation/Navigation";
 
-export default createDrawerNavigator({
-    Test: {
-        screen: () => <Test texto='opa mundo'/>
+const AppContainer = createAppContainer(AppNavigator);
+
+export default class App extends Component {
+    render() {
+        return <AppContainer/>
     }
-}, {drawerWidth: 300})
-
+}
