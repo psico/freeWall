@@ -1,12 +1,13 @@
 import {createAppContainer} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
 import Test from "../Test/Test";
+import {Home} from '../Home/Home';
 
 const AppNavigator = createStackNavigator({
-        Test: Test,
+        FreeWall: Home,
     },
     {
-        initialRouteName: 'Test',
+        initialRouteName: 'FreeWall',
     }
 );
 
