@@ -13,6 +13,8 @@ export class Home extends Component {
         return (
             <View>
                 <Text>Welcome to FreeWall</Text>
+                <Text>Every day you background will change automatic, you only need choose galery in your mobile or a
+                    random image on the web</Text>
                 <RadioForm
                     radio_props={radio_props}
                     initial={0}
