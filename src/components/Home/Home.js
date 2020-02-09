@@ -12,6 +12,7 @@ export class Home extends Component {
     render() {
         return (
             <View>
+                <Text>Welcome to FreeWall</Text>
                 <RadioForm
                     radio_props={radio_props}
                     initial={0}
