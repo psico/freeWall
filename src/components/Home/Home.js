@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View, Text, Button, Alert} from 'react-native';
+import {View, Text, Button, Alert, StyleSheet} from 'react-native';
 import RadioForm from "react-native-simple-radio-button";
 
 var radio_props = [
@@ -12,7 +12,7 @@ export class Home extends Component {
     render() {
         return (
             <View>
-                <Text>Welcome to FreeWall</Text>
+                <Text style={styles.title}>Welcome to FreeWall</Text>
                 <Text>Every day you background will change automatic, you only need choose galery in your mobile or a
                     random image on the web</Text>
                 <RadioForm
@@ -29,3 +29,10 @@ export class Home extends Component {
         );
     }
 }
+
+const styles = StyleSheet.create({
+    title: {
+        textAlign: 'center',
+        marginVertical: 12,
+    }
+});
