@@ -10,6 +10,10 @@ var radio_props = [
 
 export class Home extends Component {
 
+    save() {
+        alert('Ola mundo');
+    }
+
     render() {
         return (
             <View>
@@ -23,7 +27,7 @@ export class Home extends Component {
                         this.setState({value: value})
                     }}
                 />
-                {/*<Button onPress={Save} title={Save}/>*/}
+                <Button onPress={this.save()} title="Save"/>
             </View>
         );
     }
