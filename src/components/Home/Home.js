@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
-import {View, Text} from 'react-native';
-import RadioForm, {RadioButton} from "react-native-simple-radio-button";
-import {Button} from "react-native-web";
+import {View, Text, Button, Alert} from 'react-native';
+import RadioForm from "react-native-simple-radio-button";
 
 var radio_props = [
     {label: 'My Pictures', value: 0},
@@ -9,10 +8,6 @@ var radio_props = [
 ];
 
 export class Home extends Component {
-
-    save() {
-        alert('Ola mundo');
-    }
 
     render() {
         return (
@@ -27,7 +22,9 @@ export class Home extends Component {
                         this.setState({value: value})
                     }}
                 />
-                <Button onPress={this.save()} title="Save"/>
+                <Button
+                    title='Save'
+                    onPress={() => Alert.alert('Ola mundo')} />
             </View>
         );
     }
