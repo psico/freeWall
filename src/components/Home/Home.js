@@ -32,6 +32,7 @@ export class Home extends Component {
 
 const styles = StyleSheet.create({
     title: {
+        fontSize: 22,
         textAlign: 'center',
         marginVertical: 12,
     }
