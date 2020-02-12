@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
-import {View, Text, Button, Alert, StyleSheet} from 'react-native';
+import {View, Text, Button, Alert, StyleSheet, SafeAreaView} from 'react-native';
 import RadioForm from "react-native-simple-radio-button";
-import {SafeAreaView} from "react-native-web";
 
 var radio_props = [
     {label: 'My Pictures', value: 0},
