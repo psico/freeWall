@@ -31,6 +31,11 @@ export class Home extends Component {
 }
 
 const styles = StyleSheet.create({
+    container: {
+        borderRadius: 4,
+        borderWidth:0.5,
+        borderColor: '#d6d7da'
+    },
     title: {
         fontSize: 22,
         textAlign: 'center',
