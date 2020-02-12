@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {View, Text, Button, Alert, StyleSheet, SafeAreaView, Image} from 'react-native';
 import RadioForm from "react-native-simple-radio-button";
+import {ImageBackground} from "react-native-web";
 
 
 var radio_props = [
@@ -14,9 +15,10 @@ export class Home extends Component {
         return (
 
             <SafeAreaView style={styles.container}>
-
                 <View>
-                    <Image source={{ uri: "https://source.unsplash.com/random" }} style={styles.backgroundImage}/>
+                    <ImageBackground source={{ uri: "https://source.unsplash.com/random" }} style={styles.backgroundImage}>
+                        <Text>Teste</Text>
+                    </ImageBackground>
                     <Text style={styles.title}>Welcome to FreeWall</Text>
                     <Text>Every day you background will change automatic, you only need choose galery in your mobile or
                         a
