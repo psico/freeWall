@@ -4,12 +4,18 @@ import RadioForm from "react-native-simple-radio-button";
 import {ImageBackground} from "react-native-web";
 
 
-var radio_props = [
+let radio_props = [
     {label: 'My Pictures', value: 0},
     {label: 'Web Pictures', value: 1}
 ];
+let bgColor = "red";
 
 export class Home extends Component {
+
+    save = () => {
+        bgColor = "orange";
+        Alert.alert('Ola mundo');
+    }
 
     render() {
         return (
@@ -32,7 +38,7 @@ export class Home extends Component {
                     />
                     <Button
                         title='Save'
-                        onPress={() => Alert.alert('Ola mundo')}/>
+                        onPress={this.save}/>
                 </View>
             </SafeAreaView>
 
@@ -46,7 +52,7 @@ const styles = StyleSheet.create({
         fontFamily: "-apple-system, BlinkMacSystemFont Segoe UI",
         justifyContent: "center",
         alignItems: "center",
-        backgroundColor: "orange"
+        backgroundColor: bgColor
     },
     title: {
         fontSize: 22,
@@ -57,8 +63,4 @@ const styles = StyleSheet.create({
         flex: 1,
         resizeMode: 'cover'
     }
-    // ,
-    // screenBackground: {
-    //     backgroundImage: url("https://source.unsplash.com/random")
-    // }
 });
