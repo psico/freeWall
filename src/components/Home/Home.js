@@ -42,10 +42,8 @@ export class Home extends Component {
 
 const styles = StyleSheet.create({
     container: {
-        borderRadius: 4,
-        borderWidth: 0.5,
-        borderColor: '#d6d7da',
-        textAlign: 'center',
+        flex: 1,
+        fontFamily: "-apple-system, BlinkMacSystemFont Segoe UI",
         justifyContent: "center",
         alignItems: "center",
         backgroundColor: "orange"
