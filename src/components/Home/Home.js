@@ -22,9 +22,6 @@ export class Home extends Component {
 
             <SafeAreaView style={styles.container}>
                 <View>
-                    {/*<ImageBackground source={{ uri: "https://source.unsplash.com/random" }} style={styles.backgroundImage}>*/}
-                    {/*    <Text>Teste</Text>*/}
-                    {/*</ImageBackground>*/}
                     <Text style={styles.title}>Welcome to FreeWall</Text>
                     <Text>Every day you background will change automatic, you only need choose galery in your mobile or
                         a
