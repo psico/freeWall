@@ -19,26 +19,28 @@ export class Home extends Component {
 
     render() {
         return (
-
-            <SafeAreaView style={styles.container}>
-                <View>
-                    <Text style={styles.title}>Welcome to FreeWall</Text>
-                    <Text>Every day you background will change automatic, you only need choose galery in your mobile or
-                        a
-                        random image on the web</Text>
-                    <RadioForm
-                        radio_props={radio_props}
-                        initial={0}
-                        onPress={(value) => {
-                            this.setState({value: value})
-                        }}
-                    />
-                    <Button
-                        title='Save'
-                        onPress={this.save}/>
-                </View>
-            </SafeAreaView>
-
+            <Image source={require('./fundo.jpg')}
+                   style={styles.container}>
+                <SafeAreaView>
+                    <View>
+                        <Text style={styles.title}>Welcome to FreeWall</Text>
+                        <Text>Every day you background will change automatic, you only need choose galery in your mobile
+                            or
+                            a
+                            random image on the web</Text>
+                        <RadioForm
+                            radio_props={radio_props}
+                            initial={0}
+                            onPress={(value) => {
+                                this.setState({value: value})
+                            }}
+                        />
+                        <Button
+                            title='Save'
+                            onPress={this.save}/>
+                    </View>
+                </SafeAreaView>
+            </Image>
         );
     }
 }
@@ -49,7 +51,10 @@ const styles = StyleSheet.create({
         fontFamily: "-apple-system, BlinkMacSystemFont Segoe UI",
         justifyContent: "center",
         alignItems: "center",
-        backgroundColor: bgColor
+        backgroundColor: bgColor,
+        width: null,
+        height: null,
+        resizeMode: 'cover'
     },
     title: {
         fontSize: 22,
