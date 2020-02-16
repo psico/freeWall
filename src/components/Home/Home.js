@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
-import {View, Text, Button, Alert, StyleSheet, SafeAreaView, Image} from 'react-native';
+import {View, Text, Button, Alert, StyleSheet, SafeAreaView, ImageBackground} from 'react-native';
 import RadioForm from "react-native-simple-radio-button";
-import {ImageBackground} from "react-native-web";
-
 
 let radio_props = [
     {label: 'My Pictures', value: 0},
@@ -15,19 +13,18 @@ export class Home extends Component {
     save = () => {
         bgColor = "orange";
         Alert.alert('Ola mundo');
-    }
+    };
 
     render() {
         return (
-            <Image source={require('./fundo.jpg')}
-                   style={styles.container}>
-                <SafeAreaView>
+            <SafeAreaView style={styles.container}>
+                <ImageBackground source={require('./fundo.jpg')}
+                                 style={styles.backgroundImage}>
+                    {this.props.children}
                     <View>
                         <Text style={styles.title}>Welcome to FreeWall</Text>
                         <Text>Every day you background will change automatic, you only need choose galery in your mobile
-                            or
-                            a
-                            random image on the web</Text>
+                            or a random image on the web</Text>
                         <RadioForm
                             radio_props={radio_props}
                             initial={0}
@@ -39,8 +36,8 @@ export class Home extends Component {
                             title='Save'
                             onPress={this.save}/>
                     </View>
-                </SafeAreaView>
-            </Image>
+                </ImageBackground>
+            </SafeAreaView>
         );
     }
 }
@@ -63,6 +60,8 @@ const styles = StyleSheet.create({
     },
     backgroundImage: {
         flex: 1,
+        width: null,
+        height: null,
         resizeMode: 'cover'
     }
 });
