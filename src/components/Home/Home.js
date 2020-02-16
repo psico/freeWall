@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {View, Text, Button, Alert, StyleSheet, SafeAreaView, ImageBackground} from 'react-native';
 import RadioForm from "react-native-simple-radio-button";
+import {color} from "react-native-reanimated";
 
 let radio_props = [
     {label: 'My Pictures', value: 0},
@@ -23,7 +24,7 @@ export class Home extends Component {
                     {this.props.children}
                     <View>
                         <Text style={styles.title}>Welcome to FreeWall</Text>
-                        <Text>Every day you background will change automatic, you only need choose galery in your mobile
+                        <Text style={styles.text}>Every day you background will change automatic, you only need choose galery in your mobile
                             or a random image on the web</Text>
                         <RadioForm
                             radio_props={radio_props}
@@ -53,6 +54,9 @@ const styles = StyleSheet.create({
         width: null,
         height: null,
         resizeMode: 'cover'
+    },
+    text: {
+      color: "white"
     },
     title: {
         fontSize: 22,
