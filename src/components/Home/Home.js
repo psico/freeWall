@@ -49,6 +49,7 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
         backgroundColor: bgColor,
+        color: "white",
         width: null,
         height: null,
         resizeMode: 'cover'
@@ -57,6 +58,7 @@ const styles = StyleSheet.create({
         fontSize: 22,
         textAlign: 'center',
         marginVertical: 12,
+        color: 'white',
     },
     backgroundImage: {
         flex: 1,
