@@ -1,14 +1,21 @@
 import React, {Component} from 'react';
-import {View, Text, Button, Alert, StyleSheet, SafeAreaView, ImageBackground} from 'react-native';
-import RadioForm from "react-native-simple-radio-button";
+import {View, Text, Button, Alert, StyleSheet, SafeAreaView, ImageBackground, Picker} from 'react-native';
 
 let radio_props = [
     {label: 'My Pictures', value: 0},
     {label: 'Web Pictures', value: 1}
 ];
 let bgColor = "red";
+let language = "web";
 
 export class Home extends Component {
+
+    state = { language: "web" };
+
+    constructor() {
+        super();
+        this.language = "web";
+    }
 
     save = () => {
         bgColor = "orange";
@@ -25,14 +32,15 @@ export class Home extends Component {
                         <Text style={styles.title}>Welcome to FreeWall</Text>
                         <Text style={styles.text}>Every day you background will change automatic, you only need choose galery in your mobile
                             or a random image on the web</Text>
-                        <RadioForm
+                        <Picker
+                            selectedValue={this.state.language}
                             style={styles.text}
-                            radio_props={radio_props}
-                            initial={0}
-                            onPress={(value) => {
-                                this.setState({value: value})
-                            }}
-                        />
+                            onValueChange={(itemValue, itemIndex) =>
+                                this.setState({language: itemValue})
+                            }>
+                            {/*<Picker.Item label="Web" value"web" />*/}
+                            {/*<Picker.Item label="Mobile" value"mobile" />*/}
+                        </Picker>
                         <Button
                             title='Save'
                             onPress={this.save}/>
