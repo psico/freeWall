@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import {View, Text, Button, Alert, StyleSheet, SafeAreaView, ImageBackground} from 'react-native';
 import RadioForm from "react-native-simple-radio-button";
-import {color} from "react-native-reanimated";
 
 let radio_props = [
     {label: 'My Pictures', value: 0},
@@ -27,6 +26,7 @@ export class Home extends Component {
                         <Text style={styles.text}>Every day you background will change automatic, you only need choose galery in your mobile
                             or a random image on the web</Text>
                         <RadioForm
+                            style={styles.text}
                             radio_props={radio_props}
                             initial={0}
                             onPress={(value) => {
