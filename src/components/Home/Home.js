@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {useState} from 'react';
 import {View, Text, Button, Alert, StyleSheet, SafeAreaView, ImageBackground, Picker} from 'react-native';
 
 let radio_props = [
@@ -8,48 +8,47 @@ let radio_props = [
 let bgColor = "red";
 let language = "web";
 
-export class Home extends Component {
+export default function Home() {
+    const [selectedValue, setSelectedValue] = useState("language");
 
-    state = { language: "web" };
-
-    constructor() {
-        super();
-        this.language = "web";
-    }
-
-    save = () => {
-        bgColor = "orange";
-        Alert.alert('Ola mundo');
-    };
-
-    render() {
-        return (
-            <SafeAreaView style={styles.container}>
-                <ImageBackground source={require('./fundo.jpg')}
-                                 style={styles.backgroundImage}>
-                    {this.props.children}
+    return (
+        <View>
+        <SafeAreaView style={styles.container}>
+            <ImageBackground source={require('./fundo.jpg')}
+                             style={styles.backgroundImage}>
+                {this.props.children}
+                <View>
+                    <Text style={styles.title}>Welcome to FreeWall</Text>
+                    <Text style={styles.text}>Every day you background will change automatic, you only need choose
+                        galery in your mobile
+                        or a random image on the web</Text>
                     <View>
-                        <Text style={styles.title}>Welcome to FreeWall</Text>
-                        <Text style={styles.text}>Every day you background will change automatic, you only need choose galery in your mobile
-                            or a random image on the web</Text>
                         <Picker
-                            selectedValue={this.state.language}
+                            selectedValue={selectedValue}
                             style={styles.text}
-                            onValueChange={(itemValue, itemIndex) =>
-                                this.setState({language: itemValue})
-                            }>
+                            onValueChange={(itemValue, itemIndex) => setSelectedValue(itemValue)}
+                        >
                             {/*<Picker.Item label="Web" value"web" />*/}
                             {/*<Picker.Item label="Mobile" value"mobile" />*/}
                         </Picker>
-                        <Button
-                            title='Save'
-                            onPress={this.save}/>
                     </View>
-                </ImageBackground>
-            </SafeAreaView>
-        );
-    }
+                    <Button
+                        title='Save'
+                        onPress={() => {
+                            bgColor = "orange";
+                            Alert.alert('Ola mundo');
+                        }}/>
+                </View>
+            </ImageBackground>
+        </SafeAreaView>
+        </View>
+    );
 }
+
+// save = () => {
+//     bgColor = "orange";
+//     Alert.alert('Ola mundo');
+// };
 
 const styles = StyleSheet.create({
     container: {
@@ -64,7 +63,7 @@ const styles = StyleSheet.create({
         resizeMode: 'cover'
     },
     text: {
-      color: "white"
+        color: "white"
     },
     title: {
         fontSize: 22,
