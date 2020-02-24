@@ -1,16 +1,13 @@
 import React, {useState} from 'react';
 import {View, Text, Button, Alert, StyleSheet, SafeAreaView, ImageBackground, Picker} from 'react-native';
 
-let bgColor = "red";
-
-export default function Home() {
+function Home() {
     const [selectedValue, setSelectedValue] = useState("language");
 
     return (
         <SafeAreaView style={styles.container}>
             <ImageBackground source={require('./fundo.jpg')}
                              style={styles.backgroundImage}>
-                {/*{this.props.children}*/}
                 <View>
                     <Text style={styles.title}>Welcome to FreeWall</Text>
                     <Text style={styles.text}>Every day you background will change automatic, you only need choose
@@ -27,15 +24,18 @@ export default function Home() {
                     </View>
                     <Button
                         title='Save'
-                        onPress={() => {
-                            bgColor = "orange";
-                            Alert.alert('Ola mundo');
-                        }}/>
+                        onPress={save}/>
                 </View>
             </ImageBackground>
         </SafeAreaView>
     );
 }
+
+let save = () => {
+    Alert.alert('Ola mundo');
+};
+
+export default Home;
 
 const styles = StyleSheet.create({
     container: {
@@ -43,7 +43,6 @@ const styles = StyleSheet.create({
         fontFamily: "-apple-system, BlinkMacSystemFont Segoe UI",
         justifyContent: "center",
         alignItems: "center",
-        backgroundColor: bgColor,
         color: "white",
         width: null,
         height: null,
