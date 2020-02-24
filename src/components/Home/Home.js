@@ -1,7 +1,9 @@
 import React, {useState} from 'react';
 import {View, Text, Button, Alert, StyleSheet, SafeAreaView, ImageBackground, Picker} from 'react-native';
 
-let backgroundImage = './fundo.jpg';
+// let backgroundImage = './fundo.jpg';
+let backgroundImage = './cars.jpg';
+
 
 function Home() {
     const [selectedValue, setSelectedValue] = useState("language");
