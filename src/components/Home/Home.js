@@ -20,10 +20,9 @@ export default function Home() {
                         <Picker
                             selectedValue={selectedValue}
                             style={styles.text}
-                            onValueChange={(itemValue, itemIndex) => setSelectedValue(itemValue)}
-                        >
-                            {/*<Picker.Item label="Web" value"web" />*/}
-                            {/*<Picker.Item label="Mobile" value"mobile" />*/}
+                            onValueChange={(itemValue, itemIndex) => setSelectedValue(itemValue)} >
+                            <Picker.Item label="Web" value="web" />
+                            <Picker.Item label="Mobile" value="mobile" />
                         </Picker>
                     </View>
                     <Button
