@@ -1,12 +1,14 @@
 import React, {useState} from 'react';
 import {View, Text, Button, Alert, StyleSheet, SafeAreaView, ImageBackground, Picker} from 'react-native';
 
+let backgroundImage = './fundo.jpg';
+
 function Home() {
     const [selectedValue, setSelectedValue] = useState("language");
 
     return (
         <SafeAreaView style={styles.container}>
-            <ImageBackground source={require('./fundo.jpg')}
+            <ImageBackground source={require(backgroundImage)}
                              style={styles.backgroundImage}>
                 <View>
                     <Text style={styles.title}>Welcome to FreeWall</Text>
