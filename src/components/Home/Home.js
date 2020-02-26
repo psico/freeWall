@@ -1,17 +1,13 @@
 import React, {useState} from 'react';
 import {View, Text, Button, Alert, StyleSheet, SafeAreaView, ImageBackground, Picker} from 'react-native';
 
-// let backgroundImage = './fundo.jpg';
-let backgroundImage = './cars.jpg';
-
-
 function Home() {
     const [selectedValue, setSelectedValue] = useState("language");
     const [backgroundImageValue, setBackgroundImageValue] = useState(4);
 
-    console.log('ddddddddddddd eeeeeee');
-    console.log(require('./cars.jpg'));
-    console.log(require('./fundo.jpg'));
+    // console.log('ddddddddddddd eeeeeee');
+    // console.log(require('./cars.jpg'));
+    // console.log(require('./fundo.jpg'));
 
     return (
         <SafeAreaView style={styles.container}>
@@ -35,7 +31,11 @@ function Home() {
                         title='Save'
                         onPress={() => {
                             Alert.alert('Ola mundo');
-                            setBackgroundImageValue(3);
+                            if (backgroundImageValue === 4) {
+                                setBackgroundImageValue(3);
+                            } else {
+                                setBackgroundImageValue(4);
+                            }
                         }}/>
                 </View>
             </ImageBackground>
