@@ -7,10 +7,11 @@ let backgroundImage = './cars.jpg';
 
 function Home() {
     const [selectedValue, setSelectedValue] = useState("language");
+    const [backgroundImageValue, setBackgroundImageValue] = useState("'./cars.jpg'");
 
     return (
         <SafeAreaView style={styles.container}>
-            <ImageBackground source={require(backgroundImage)}
+            <ImageBackground source={require('./cars.jpg')}
                              style={styles.backgroundImage}>
                 <View>
                     <Text style={styles.title}>Welcome to FreeWall</Text>
