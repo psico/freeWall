@@ -7,11 +7,15 @@ let backgroundImage = './cars.jpg';
 
 function Home() {
     const [selectedValue, setSelectedValue] = useState("language");
-    const [backgroundImageValue, setBackgroundImageValue] = useState("'./cars.jpg'");
+    const [backgroundImageValue, setBackgroundImageValue] = useState(4);
+
+    console.log('ddddddddddddd eeeeeee');
+    console.log(require('./cars.jpg'));
+    console.log(require('./fundo.jpg'));
 
     return (
         <SafeAreaView style={styles.container}>
-            <ImageBackground source={require('./cars.jpg')}
+            <ImageBackground source={backgroundImageValue}
                              style={styles.backgroundImage}>
                 <View>
                     <Text style={styles.title}>Welcome to FreeWall</Text>
@@ -29,7 +33,10 @@ function Home() {
                     </View>
                     <Button
                         title='Save'
-                        onPress={save}/>
+                        onPress={() => {
+                            Alert.alert('Ola mundo');
+                            setBackgroundImageValue(3);
+                        }}/>
                 </View>
             </ImageBackground>
         </SafeAreaView>
