@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
 import {View, Text, Button, Alert, StyleSheet, SafeAreaView, ImageBackground, Picker} from 'react-native';
 // import WallPaperManager from 'react-native-wallpaper-enhanced';
-import RNWalle from "react-native-walle";
-import WallPaperManager from 'react-native-wallpaper-enhanced';
+// import RNWalle from "react-native-walle";
+// import WallPaperManager from 'react-native-wallpaper-enhanced';
+import WallPaperManager from 'react-native-wallpaper-manager';
 
 function Home() {
     const [selectedValue, setSelectedValue] = useState("language");
@@ -37,20 +38,20 @@ function Home() {
                             if (backgroundImageValue === 4) {
                                 setBackgroundImageValue(3);
                                 // WallPaperManager.setWallpaper({uri: 'https://cdn.pixabay.com/photo/2018/08/21/23/29/fog-3622519__340.jpg'}, (res)=> console.log(res));
-                                RNWalle.setWallPaper("http://i.imgur.com/DvpvklR.png", function(res) {
-                                    console.log(res);
-                                    //res : 'success'
-                                    //res : 'failed' or 'reason to fail while trying to set wallpaper'
-                                });
-                                WallPaperManager.setWallPaper({uri: "http://i.imgur.com/DvpvklR.png"}, (res)=> console.log(res));
+                                // RNWalle.setWallPaper("http://i.imgur.com/DvpvklR.png", function(res) {
+                                //     console.log(res);
+                                //     //res : 'success'
+                                //     //res : 'failed' or 'reason to fail while trying to set wallpaper'
+                                // });
+                                // WallPaperManager.setWallPaper({uri: "http://i.imgur.com/DvpvklR.png"}, (res)=> console.log(res));
                             } else {
                                 setBackgroundImageValue(4);
                                 // WallPaperManager.setWallpaper({uri: 'https://cwsmgmt.corsair.com/newscripts/landing-pages/wallpaper/v4/Wallpaper-v4-2560x1440.jpg'}, (res)=> console.log(res));
-                                RNWalle.setWallPaper("http://i.imgur.com/DvpvklR.png", function(res) {
-                                    console.log(res);
-                                    //res : 'success'
-                                    //res : 'failed' or 'reason to fail while trying to set wallpaper'
-                                });
+                                // RNWalle.setWallPaper("http://i.imgur.com/DvpvklR.png", function(res) {
+                                //     console.log(res);
+                                //     //res : 'success'
+                                //     //res : 'failed' or 'reason to fail while trying to set wallpaper'
+                                // });
                                 WallPaperManager.setWallPaper({uri: "http://i.imgur.com/DvpvklR.png"}, (res)=> console.log(res));
                             }
                         }}/>

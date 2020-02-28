@@ -23,6 +23,7 @@
     "react-native-simple-radio-button": "^2.7.4",
     "react-native-walle": "git+https://github.com/kaissaroj/react-native-wallpaper.git",
     "react-native-wallpaper-enhanced": "^0.4.0",
+    "react-native-wallpaper-manager": "^0.3.16",
     "react-native-web": "~0.11.7"
   },
   "devDependencies": {
