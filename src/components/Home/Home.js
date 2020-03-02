@@ -6,8 +6,8 @@ function Home() {
     const [selectedValue, setSelectedValue] = useState("language");
     const [backgroundImageValue, setBackgroundImageValue] = useState(4);
 
-    // console.log(require('./cars.jpg'));
-    // console.log(require('./fundo.jpg'));
+    console.log(require('./cars.jpg'));
+    console.log(require('./fundo.jpg'));
 
     return (
         <SafeAreaView style={styles.container}>
