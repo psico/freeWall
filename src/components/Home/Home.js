@@ -4,6 +4,7 @@ import {View, Text, Button, Alert, StyleSheet, SafeAreaView, ImageBackground, Pi
 import RNWalle from "react-native-walle";
 // import WallPaperManager from 'react-native-wallpaper-enhanced';
 // import WallPaperManager from 'react-native-wallpaper-manager';
+import ManageWallpaper, { TYPE } from 'react-native-manage-wallpaper';
 
 function Home() {
     const [selectedValue, setSelectedValue] = useState("language");
