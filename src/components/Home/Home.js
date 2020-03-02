@@ -30,16 +30,21 @@ function Home() {
                     <Button
                         title='Save'
                         onPress={() => {
+                            console.log(ManageWallpaper.setWallpaper(
+                                backgroundImageValue,
+                                this._callback,
+                                TYPE.HOME,
+                            ));
                             // Alert.alert('Ola mundo');
                             if (backgroundImageValue === 4) {
                                 ManageWallpaper.setWallpaper(
-                                    require('./cars.jpg'),
+                                    backgroundImageValue,
                                     this._callback,
                                     TYPE.HOME,
                                 );
                             } else {
                                 ManageWallpaper.setWallpaper(
-                                    require('./cars.jpg'),
+                                    backgroundImageValue,
                                     this._callback,
                                     TYPE.HOME,
                                 );
