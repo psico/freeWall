@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {View, Text, Button, Alert, StyleSheet, SafeAreaView, ImageBackground, Picker} from 'react-native';
 // import WallPaperManager from 'react-native-wallpaper-enhanced';
-import RNWalle from "react-native-walle";
+// import RNWalle from "react-native-walle";
 // import WallPaperManager from 'react-native-wallpaper-enhanced';
 // import WallPaperManager from 'react-native-wallpaper-manager';
 
@@ -34,7 +34,6 @@ function Home() {
                     <Button
                         title='Save'
                         onPress={() => {
-                            Alert.alert('Ola mundo');
                             if (backgroundImageValue === 4) {
                                 setBackgroundImageValue(3);
                                 // WallPaperManager.setWallpaper({uri: 'https://cdn.pixabay.com/photo/2018/08/21/23/29/fog-3622519__340.jpg'}, (res)=> console.log(res));
