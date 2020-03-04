@@ -2,9 +2,22 @@ import React, {useState} from 'react';
 import {View, Text, Button, Alert, StyleSheet, SafeAreaView, ImageBackground, Picker} from 'react-native';
 import ManageWallpaper, { TYPE } from 'react-native-manage-wallpaper';
 
+
+
 function Home() {
     const [selectedValue, setSelectedValue] = useState("language");
     const [backgroundImageValue, setBackgroundImageValue] = useState(4);
+
+    let _setWallpaper;
+    _setWallpaper = () => {
+        ManageWallpaper.setWallpaper(
+            {
+                uri: 'https://i.pinimg.com/originals/76/5e/1d/765e1dc8cb1cc115fb3b0b39a895fdeb.jpg',
+            },
+            this._callback,
+            TYPE.HOME,
+        );
+    };
 
     console.log(require('./cars.jpg'));
     console.log(require('./fundo.jpg'));
@@ -29,27 +42,7 @@ function Home() {
                     </View>
                     <Button
                         title='Save'
-                        onPress={() => {
-                            console.log(ManageWallpaper.setWallpaper(
-                                backgroundImageValue,
-                                this._callback,
-                                TYPE.HOME,
-                            ));
-                            // Alert.alert('Ola mundo');
-                            if (backgroundImageValue === 4) {
-                                ManageWallpaper.setWallpaper(
-                                    backgroundImageValue,
-                                    this._callback,
-                                    TYPE.HOME,
-                                );
-                            } else {
-                                ManageWallpaper.setWallpaper(
-                                    backgroundImageValue,
-                                    this._callback,
-                                    TYPE.HOME,
-                                );
-                            }
-                        }}/>
+                        onPress={_setWallpaper}/>
                 </View>
             </ImageBackground>
         </SafeAreaView>
