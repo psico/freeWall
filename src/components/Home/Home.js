@@ -14,9 +14,7 @@ function Home() {
                              style={styles.backgroundImage}>
                 <View>
                     <Text style={styles.title}>Welcome to FreeWall</Text>
-                    <Text style={styles.text}>Every day you background will change automatic, you only need choose
-                        galery in your mobile
-                        or a random image on the web</Text>
+                    <Text style={styles.text}>Touch the change button to alternate wallpaper.</Text>
                     <Button
                         title='Save'
                         onPress={() => {
