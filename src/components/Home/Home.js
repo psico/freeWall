@@ -17,15 +17,6 @@ function Home() {
                     <Text style={styles.text}>Every day you background will change automatic, you only need choose
                         galery in your mobile
                         or a random image on the web</Text>
-                    <View>
-                        <Picker
-                            selectedValue={selectedValue}
-                            style={styles.text}
-                            onValueChange={(itemValue, itemIndex) => setSelectedValue(itemValue)} >
-                            <Picker.Item label="Web" value="web" />
-                            <Picker.Item label="Mobile" value="mobile" />
-                        </Picker>
-                    </View>
                     <Button
                         title='Save'
                         onPress={() => {
