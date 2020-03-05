@@ -1,8 +1,7 @@
 import React, {useState} from 'react';
-import {View, Text, Button, Alert, StyleSheet, SafeAreaView, ImageBackground, Picker} from 'react-native';
+import {View, Text, Button, StyleSheet, SafeAreaView, ImageBackground} from 'react-native';
 
 function Home() {
-    const [selectedValue, setSelectedValue] = useState("language");
     const [backgroundImageValue, setBackgroundImageValue] = useState(4);
 
     console.log(require('./cars.jpg'));
