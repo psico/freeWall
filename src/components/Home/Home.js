@@ -41,10 +41,6 @@ function Home() {
     );
 }
 
-let save = () => {
-    Alert.alert('Ola mundo');
-};
-
 export default Home;
 
 const styles = StyleSheet.create({
