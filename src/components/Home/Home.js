@@ -1,7 +1,5 @@
 import React, {useState} from 'react';
 import {View, Text, Button, Alert, StyleSheet, SafeAreaView, ImageBackground, Picker} from 'react-native';
-// import WallPaperManager from 'react-native-wallpaper-enhanced';
-// import WallPaperManager from 'react-native-wallpaper-manager';
 
 function Home() {
     const [selectedValue, setSelectedValue] = useState("language");
@@ -33,12 +31,8 @@ function Home() {
                         onPress={() => {
                             if (backgroundImageValue === 4) {
                                 setBackgroundImageValue(3);
-                                // WallPaperManager.setWallpaper({uri: 'https://cdn.pixabay.com/photo/2018/08/21/23/29/fog-3622519__340.jpg'}, (res)=> console.log(res));
-                                // WallPaperManager.setWallPaper({uri: "http://i.imgur.com/DvpvklR.png"}, (res)=> console.log(res));
                             } else {
                                 setBackgroundImageValue(4);
-                                // WallPaperManager.setWallpaper({uri: 'https://cwsmgmt.corsair.com/newscripts/landing-pages/wallpaper/v4/Wallpaper-v4-2560x1440.jpg'}, (res)=> console.log(res));
-                                // WallPaperManager.setWallPaper({uri: "http://i.imgur.com/DvpvklR.png"}, (res)=> console.log(res));
                             }
                         }}/>
                 </View>
