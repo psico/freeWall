@@ -5,25 +5,26 @@ function Home() {
     const [backgroundImageValue, setBackgroundImageValue] = useState('https://facebook.github.io/react/logo-og.png');
 
     return (
-            <ImageBackground source={{
-                uri: backgroundImageValue,
-                method: 'POST',
-                headers: {
-                    Pragma: 'no-cache',
-                },
-                body: 'Your Body goes here',
-            }}
-                             style={styles.backgroundImage}>
-                <View>
-                    <Text style={styles.title}>Welcome to FreeWall</Text>
-                    <Text style={styles.text}>Touch the change button to alternate wallpaper.</Text>
-                    <Button
-                        title='Change image'
-                        onPress={() => {
-                            setBackgroundImageValue('https://i.picsum.photos/id/45/400/600.jpg');
-                        }}/>
-                </View>
-            </ImageBackground>
+        <ImageBackground source={{
+            uri: backgroundImageValue,
+            method: 'POST',
+            headers: {
+                Pragma: 'no-cache',
+            },
+            body: 'Your Body goes here',
+        }}
+                         style={styles.backgroundImage}>
+            <View>
+                <Text style={styles.title}>Welcome to FreeWall</Text>
+                <Text style={styles.text}>Touch the change button to alternate wallpaper.</Text>
+                <Button
+                    title='Change image'
+                    onPress={() => {
+                        let RandomNumber = Math.floor(Math.random() * 100) + 1;
+                        setBackgroundImageValue('https://i.picsum.photos/id/' + RandomNumber + '/400/600.jpg');
+                    }}/>
+            </View>
+        </ImageBackground>
     );
 }
 
