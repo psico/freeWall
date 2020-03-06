@@ -5,7 +5,6 @@ function Home() {
     const [backgroundImageValue, setBackgroundImageValue] = useState('https://facebook.github.io/react/logo-og.png');
 
     return (
-        <SafeAreaView style={styles.container}>
             <ImageBackground source={{
                 uri: backgroundImageValue,
                 method: 'POST',
@@ -21,11 +20,10 @@ function Home() {
                     <Button
                         title='Change image'
                         onPress={() => {
-                            setBackgroundImageValue('https://picsum.photos/200/300');
+                            setBackgroundImageValue('https://i.picsum.photos/id/45/400/600.jpg');
                         }}/>
                 </View>
             </ImageBackground>
-        </SafeAreaView>
     );
 }
 
