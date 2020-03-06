@@ -2,11 +2,18 @@ import React, {useState} from 'react';
 import {View, Text, Button, StyleSheet, SafeAreaView, ImageBackground} from 'react-native';
 
 function Home() {
-    const [backgroundImageValue, setBackgroundImageValue] = useState(require('./cars.jpg'));
+    const [backgroundImageValue, setBackgroundImageValue] = useState('https://facebook.github.io/react/logo-og.png');
 
     return (
         <SafeAreaView style={styles.container}>
-            <ImageBackground source={backgroundImageValue}
+            <ImageBackground source={{
+                uri: backgroundImageValue,
+                method: 'POST',
+                headers: {
+                    Pragma: 'no-cache',
+                },
+                body: 'Your Body goes here',
+            }}
                              style={styles.backgroundImage}>
                 <View>
                     <Text style={styles.title}>Welcome to FreeWall</Text>
