@@ -15,13 +15,13 @@ function Home() {
                     <Text style={styles.title}>Welcome to FreeWall</Text>
                     <Text style={styles.text}>Touch the change button to alternate wallpaper.</Text>
                     <Button
-                        title='Save'
+                        title='Change image'
                         onPress={() => {
-                            if (backgroundImageValue === 4) {
-                                setBackgroundImageValue(3);
-                            } else {
-                                setBackgroundImageValue(4);
-                            }
+                            // if (backgroundImageValue === 4) {
+                            //     setBackgroundImageValue(3);
+                            // } else {
+                            //     setBackgroundImageValue(4);
+                            // }
                         }}/>
                 </View>
             </ImageBackground>
