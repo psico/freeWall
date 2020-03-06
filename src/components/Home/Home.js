@@ -21,7 +21,7 @@ function Home() {
                     <Button
                         title='Change image'
                         onPress={() => {
-                            setBackgroundImageValue(require('./fundo.jpg'));
+                            setBackgroundImageValue('https://picsum.photos/200/300');
                         }}/>
                 </View>
             </ImageBackground>
