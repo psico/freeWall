@@ -2,10 +2,7 @@ import React, {useState} from 'react';
 import {View, Text, Button, StyleSheet, SafeAreaView, ImageBackground} from 'react-native';
 
 function Home() {
-    const [backgroundImageValue, setBackgroundImageValue] = useState(3);
-
-    console.log(require('./cars.jpg'));
-
+    const [backgroundImageValue, setBackgroundImageValue] = useState(require('./cars.jpg'));
 
     return (
         <SafeAreaView style={styles.container}>
@@ -17,13 +14,7 @@ function Home() {
                     <Button
                         title='Change image'
                         onPress={() => {
-                            console.log(require('./fundo.jpg'));
                             setBackgroundImageValue(require('./fundo.jpg'));
-                            // if (backgroundImageValue === 4) {
-                            //     setBackgroundImageValue(3);
-                            // } else {
-                            //     setBackgroundImageValue(4);
-                            // }
                         }}/>
                 </View>
             </ImageBackground>
